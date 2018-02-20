@@ -1,13 +1,13 @@
 public Class Album {
 	
-	private String albumName;
+	private String name;
 	private int year;
 	private String[] artists;
 	private String[] leader;
 
-	public Album(String albumName, int year, String[] artists, String[] leader) {
+	public Album(String name, int year, String[] artists, String[] leader) {
 
-		this.albumName = albumName;
+		this.name = name;
 		this.year = year;
 		this.artists = artists;
 		this.leader = leader;
@@ -16,7 +16,7 @@ public Class Album {
 
 
 	public String getName() {
-		return this.albumName;
+		return this.name;
 	}
 
 	public int getYear() {
@@ -34,7 +34,7 @@ public Class Album {
 
 
 	public String setName(String name) {
-		this.albumName = name;
+		this.name = name;
 		return this.albumName;
 	}
 	public int setYear(int year) {
