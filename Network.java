@@ -1,6 +1,6 @@
 import java.util.HashMap;
 
-public Class Network {
+public class Network {
 	
 	private String name;
 	private HashMap<String, Node> nodes = new HashMap<String, Node>();
@@ -13,7 +13,7 @@ public Class Network {
 		return this.name;
 	}
 
-	public Node addNode(Node entry) {
+	public void addNode(Node entry) {
 		this.nodes.put(entry.getName(), entry);
 	}
 
@@ -22,7 +22,7 @@ public Class Network {
 			System.out.println("Invalid Entry");
 			return null;
 		} else {
-			this.nodes.get(entry);	
+			return this.nodes.get(entry);	
 		}
 	}
 

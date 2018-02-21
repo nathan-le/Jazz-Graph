@@ -1,6 +1,7 @@
 import java.util.HashMap;
+import java.util.*;
 
-public Class Node {
+public class Node {
 	
 	private String name;
 	private Album album;
@@ -12,10 +13,10 @@ public Class Node {
 		this.name = name;
 		this.album = album;
 		for (int i = 0; i < outEdges.length; i += 1) {
-			out.put(outEdges[i].name, outEdges[i]);
+			out.put(outEdges[i].getName(), outEdges[i]);
 		}
 		for (int i = 0; i < inEdges.length; i += 1) {
-			in.put(inEdges[i].name, inEdges[i]);
+			in.put(inEdges[i].getName(), inEdges[i]);
 		}
 		this.group = group;
 	}
@@ -36,13 +37,13 @@ public Class Node {
 
 	public Album where(String name) {
 		if (out.containsKey(name)) {
-			System.out.println("Found %s in Out", name);
+			System.out.printf("Found %s in Out\n", name);
 			return out.get(name);
 		} else if (in.containsKey(name)) {
-			System.out.println("Found %s in In", name);
+			System.out.printf("Found %s in In\n", name);
 			return in.get(name);
 		} else {
-			System.out.println("Entry not found")
+			System.out.printf("Entry not found\n");
 			return null;
 		}
 	}
@@ -52,17 +53,17 @@ public Class Node {
 	}
 
 	public void addOut(Album entry) {
-		out.put(entry.name, entry);
+		out.put(entry.getName(), entry);
 	}
 	public void addIn(Album entry) {
-		in.put(entry.name, entry);
+		in.put(entry.getName(), entry);
 	}
 
 	public Album removeOut(Album entry) {
-		out.remove(entry.name);
+		return out.remove(entry.getName());
 	}
 	public Album removeIn(Album entry) {
-		in.remove(entry.name);
+		return in.remove(entry.getName());
 	}
 
 }

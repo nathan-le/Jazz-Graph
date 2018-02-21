@@ -1,4 +1,4 @@
-public Class Album {
+public class Album {
 	
 	private String name;
 	private int year;
@@ -35,7 +35,7 @@ public Class Album {
 
 	public String setName(String name) {
 		this.name = name;
-		return this.albumName;
+		return this.name;
 	}
 	public int setYear(int year) {
 		this.year = year;
@@ -45,7 +45,7 @@ public Class Album {
 		this.artists = artists;
 		return this.artists;
 	}
-	public String[] setArtists(String[] leader) {
+	public String[] setLeader(String[] leader) {
 		this.leader = leader;
 		return this.leader;
 	}
