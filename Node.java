@@ -2,11 +2,14 @@ import java.util.HashMap;
 
 public Class Node {
 	
+	private String name;
 	private Album album;
 	private HashMap<String, Album> out = new HashMap<String, Album>();
 	private HashMap<String, Album> in = new HashMap<String, Album>();
+	private int group;
 	
-	public Node(Album album, Album[] outEdges, Album[] inEdges) {
+	public Node(String name, Album album, Album[] outEdges, Album[] inEdges, int group) {
+		this.name = name;
 		this.album = album;
 		for (int i = 0; i < outEdges.length; i += 1) {
 			out.put(outEdges[i].name, outEdges[i]);
@@ -14,6 +17,11 @@ public Class Node {
 		for (int i = 0; i < inEdges.length; i += 1) {
 			in.put(inEdges[i].name, inEdges[i]);
 		}
+		this.group = group;
+	}
+
+	public String getName() {
+		return this.name;
 	}
 
 	public Album getAlbum() {
@@ -35,8 +43,12 @@ public Class Node {
 			return in.get(name);
 		} else {
 			System.out.println("Entry not found")
-			return void;
+			return null;
 		}
+	}
+
+	public int getGroup() {
+		return this.group;
 	}
 
 	public void addOut(Album entry) {
@@ -47,10 +59,10 @@ public Class Node {
 	}
 
 	public Album removeOut(Album entry) {
-
+		out.remove(entry.name);
 	}
 	public Album removeIn(Album entry) {
-
+		in.remove(entry.name);
 	}
 
 }
