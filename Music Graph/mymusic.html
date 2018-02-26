@@ -1,0 +1,315 @@
+<!doctype html>
+<html>
+<head>
+    <title>Network | Jazz Greats</title>
+
+    <style type="text/css">
+        #mynetwork {
+            width: 1200px;
+            height: 800px;
+        }
+    </style>
+
+    <script type="text/javascript" src="dist/vis.js"></script>
+    <link href="dist/vis-network.min.css" rel="stylesheet" type="text/css"/>
+
+    <script type="text/javascript">
+        function draw() {
+            // create some nodes
+            var nodes = [
+                {id: 0, "label": "Birth of the Cool - Miles Davis (1957)", shape: 'circularImage', image: 'img/1.png', "group": 1},
+                {id: 1, "label": "Chet Baker Sings - Chet Baker (1954)", shape: 'circularImage', image: 'img/2.png', "group": 1},
+                {id: 2, "label": "It Could Happen to You - Chet Baker (1958)", shape: 'circularImage', image: 'img/3.png', "group": 1},
+                {id: 3, "label": "Gerry Mulligan Quartet (ft. Chet Baker) - Gerry Mulligan (1952)", shape: 'circularImage', image: 'img/4.png', "group": 1},
+                {id: 4, "label": "Stan Meets Chet - Stan Getz (1958)", shape: 'circularImage', image: 'img/5.png', "group": 1},
+                {id: 5, "label": "Stan Getz and the Oscar Peterson Trio - Stan Getz (1958)", shape: 'circularImage', image: 'img/6.png', "group": 1},
+                {id: 6, "label": "Chet Baker Sings and Plays - Chet Baker (1955)", shape: 'circularImage', image: 'img/7.png', "group": 1},
+                {id: 7, "label": "Miles Ahead - Miles Davis (1957)", shape: 'circularImage', image: 'img/9.png', "group": 1},
+
+                {id: 8, "label": "'Round About Midnight - Miles Davis (1957)", shape: 'circularImage', image: 'img/8.png', "group": 2},
+
+                {id: 9, "label": "Milestones - Miles Davis (1958)", shape: 'circularImage', image: 'img/10.png', "group": 3},
+                {id: 10, "label": "Kind of Blue - Miles Davis (1959)", shape: 'circularImage', image: 'img/11.png', "group": 3},
+                {id: 11, "label": "Potraits in Jazz - Bill Evans (1960)", shape: 'circularImage', image: 'img/12.png', "group": 3},
+                {id: 12, "label": "Explorations - Bill Evans (1961)", shape: 'circularImage', image: 'img/13.png', "group": 3},
+                {id: 13, "label": "Sunday at the Village Vanguard - Bill Evans (1961)", shape: 'circularImage', image: 'img/14.png', "group": 3},
+                {id: 14, "label": "Waltz for Debby - Bill Evans (1962)", shape: 'circularImage', image: 'img/15.png', "group": 3},
+                {id: 15, "label": "Undercurrent - Bill Evans and Jim Hall (1962)", shape: 'circularImage', image: 'img/16.png', "group": 3},
+                {id: 16, "label": "Intermodulation - Bill Evans and Jim Hall (1966)", shape: 'circularImage', image: 'img/17.png', "group": 3},
+                {id: 17, "label": "Bill Evans at the Montreux Jazz Festival - Bill Evans (1968)", shape: 'circularImage', image: 'img/18.png', "group": 3},
+                {id: 18, "label": "Conversations with Myself - Bill Evans (1963)", shape: 'circularImage', image: 'img/19.png', "group": 3},
+                {id: 19, "label": "Alone - Bill Evans (1968)", shape: 'circularImage', image: 'img/20.png', "group": 3},
+
+                {id: 20, "label": "Time Out - Dave Brubeck Quartet (1959)", shape: 'circularImage', image: 'img/21.png', "group": 1},
+                {id: 21, "label": "Time Further Out - Dave Brubeck Quartet (1961)", shape: 'circularImage', image: 'img/22.png', "group": 1},
+                {id: 22, "label": "Countdown—Time in Outer Space - Dave Brubeck Quartet (1962)", shape: 'circularImage', image: 'img/23.png', "group": 1},
+                {id: 23, "label": "Time Changes - Dave Brubeck Quartet (1963)", shape: 'circularImage', image: 'img/24.png', "group": 1},
+                {id: 24, "label": "Time In - Dave Brubeck Quartet (1966)", shape: 'circularImage', image: 'img/25.png', "group": 1},
+
+                {id: 25, "label": "Take Ten - Paul Desmond (1963)", shape: 'circularImage', image: 'img/26.png', "group": 1},
+                {id: 26, "label": "Bossa Antigua - Paul Desmond (1965)", shape: 'circularImage', image: 'img/27.png', "group": 1},
+                {id: 27, "label": "Summertime - Paul Desmond (1969)", shape: 'circularImage', image: 'img/28.png', "group": 1},
+
+                {id: 28, "label": "Jazz Guitar - Jim Hall (1957)", shape: 'circularImage', image: 'img/29.png', "group": 4},
+                {id: 29, "label": "Interplay - Bill Evans (1963)", shape: 'circularImage', image: 'img/32.png', "group": 4},
+                {id: 30, "label": "The Bridge - Sonny Rollins (1962)", shape: 'circularImage', image: 'img/30.png', "group": 4},
+                {id: 31, "label": "Interaction - Art Farmer Quartet (1963)", shape: 'circularImage', image: 'img/31.png', "group": 4},
+                {id: 32, "label": "Alone Together - Jim Hall and Ron Carter (1972)", shape: 'circularImage', image: 'img/33.png', "group": 4},
+
+                {id: 33, "label": "Concierto - Jim Hall (1975)", shape: 'circularImage', image: 'img/34.png', "group": 4},
+                {id: 34, "label": "Jim Hall Live! - Jim Hall (1975)", shape: 'circularImage', image: 'img/35.png', "group": 4},
+                {id: 35, "label": "Chet - Chet Baker (1959)", shape: 'circularImage', image: 'img/36.png', "group": 4},
+
+                {id: 36, "label": "Sketches of Spain - Miles Davis (1960)", shape: 'circularImage', image: 'img/37.png', "group": 5},
+                {id: 37, "label": "Someday My Prince Will Come - Miles Davis (1961)", shape: 'circularImage', image: 'img/38.png', "group": 4},
+
+
+                {id: 38, "label": "A Night at Birdland Vol. 1 - Art Blakey (1954)", shape: 'circularImage', image: 'img/39.png', "group": 2},
+                {id: 39, "label": "Horace Silver and the Jazz Messengers - Art Blakey and the Jazz Messengers (1956)", shape: 'circularImage', image: 'img/40.png', "group": 2},
+                {id: 40, "label": "The Jazz Messengers - Art Blakey and the Jazz Messengers (1956)", shape: 'circularImage', image: 'img/41.png', "group": 2},
+                {id: 41, "label": "Moanin' - Art Blakey and the Jazz Messengers (1959)", shape: 'circularImage', image: 'img/42.png', "group": 2},
+                {id: 42, "label": "The Big Beat - Art Blakey and the Jazz Messengers (1960)", shape: 'circularImage', image: 'img/43.png', "group": 2},
+                {id: 43, "label": "A Night in Tunisia  - Art Blakey and the Jazz Messengers (1960)", shape: 'circularImage', image: 'img/44.png', "group": 2},
+                {id: 44, "label": "Art Blakey!!!!! Jazz Messengers!!!!! - Art Blakey and the Jazz Messengers (1961)", shape: 'circularImage', image: 'img/45.png', "group": 2},
+                {id: 45, "label": "Mosaic - Art Blakey and the Jazz Messengers (1962)", shape: 'circularImage', image: 'img/46.png', "group": 2},
+                {id: 46, "label": "Buhaina's Delight - Art Blakey and the Jazz Messengers (1963)", shape: 'circularImage', image: 'img/47.png', "group": 2},
+                {id: 47, "label": "Caravan - Art Blakey and the Jazz Messengers (1963)", shape: 'circularImage', image: 'img/48.png', "group": 2},
+                {id: 48, "label": "Ugetsu - Art Blakey and the Jazz Messengers (1963)", shape: 'circularImage', image: 'img/49.png', "group": 2},
+                {id: 49, "label": "Free for All - Art Blakey and the Jazz Messengers (1965)", shape: 'circularImage', image: 'img/50.png', "group": 2},
+                {id: 50, "label": "Indestructible - Art Blakey and the Jazz Messengers (1966)", shape: 'circularImage', image: 'img/51.png', "group": 2},
+
+                {id: 51, "label": "Soul Station - Hank Mobley (1960)", shape: 'circularImage', image: 'img/52.png', "group": 2},
+                {id: 52, "label": "Roll Call - Hank Mobley (1961)", shape: 'circularImage', image: 'img/53.png', "group": 2},
+                {id: 53, "label": "Workout - Hank Mobley (1962)", shape: 'circularImage', image: 'img/54.png', "group": 2},
+
+                {id: 54, "label": "Seven Steps to Heaven - Miles Davis (1963)", shape: 'circularImage', image: 'img/55.png', "group": 4},
+                {id: 55, "label": "ESP - Miles Davis (1965)", shape: 'circularImage', image: 'img/56.png', "group": 6},
+
+                {id: 56, "label": "Blue Train - John Coltrane (1958)", shape: 'circularImage', image: 'img/57.png', "group": 6},
+                {id: 57, "label": "Giant Steps - John Coltrane (1960)", shape: 'circularImage', image: 'img/58.png', "group": 6},
+
+
+                {id: 58, "label": "Takin' off - Herbie Hancock (1962)", shape: 'circularImage', image: 'img/59.png', "group": 2},
+                {id: 59, "label": "Maiden Voyage - Herbie Hancock (1966)", shape: 'circularImage', image: 'img/60.png', "group": 3},
+                {id: 60, "label": "Fat Albert Rotunda - Herbie Hancock (1969)", shape: 'circularImage', image: 'img/61.png', "group": 7},
+                {id: 61, "label": "Head Hunters - Herbie Hancock (1973)", shape: 'circularImage', image: 'img/62.png', "group": 7},
+                {id: 62, "label": "Thrust - Herbie Hancock (1974)", shape: 'circularImage', image: 'img/63.png', "group": 7},
+
+                {id: 63, "label": "Night Dreamer - Wayne Shorter (1964)", shape: 'circularImage', image: 'img/64.png', "group": 6},
+                {id: 64, "label": "Juju - Wayne Shorter (1965)", shape: 'circularImage', image: 'img/65.png', "group": 6},
+                {id: 65, "label": "Speak No Evil - Wayne Shorter (1966)", shape: 'circularImage', image: 'img/66.png', "group": 6},
+                {id: 66, "label": "The All Seeing Eye - Wayne Shorter (1966)", shape: 'circularImage', image: 'img/67.png', "group": 6},
+                {id: 67, "label": "Adam's Apple - Wayne Shorter (1967)", shape: 'circularImage', image: 'img/68.png', "group": 6},
+                {id: 68, "label": "Native Dancer - Wayne Shorter (1974)", shape: 'circularImage', image: 'img/69.png', "group": 6},
+
+                {id: 69, "label": "Miles Smiles - Miles Davis (1967)", shape: 'circularImage', image: 'img/70.png', "group": 6},
+                {id: 70, "label": "Sorcerer - Miles Davis (1967)", shape: 'circularImage', image: 'img/71.png', "group": 6},
+                {id: 71, "label": "Nefertiti - Miles Davis (1967)", shape: 'circularImage', image: 'img/72.png', "group": 6},
+                {id: 72, "label": "Miles in the Sky- Miles Davis (1968)", shape: 'circularImage', image: 'img/73.png', "group": 6},
+                {id: 73, "label": "Filles de Kilimanjaro - Miles Davis (1968)", shape: 'circularImage', image: 'img/74.png', "group": 6},
+                {id: 74, "label": "In A Silent Way - Miles Davis (1969)", shape: 'circularImage', image: 'img/75.png', "group": 6},
+                {id: 75, "label": "Bitches Brew - Miles Davis (1970)", shape: 'circularImage', image: 'img/76.png', "group": 6},
+
+                {id: 76, "label": "Stan Getz and Bill Evans - Stan Getz and Bill Evans (1964)", shape: 'circularImage', image: 'img/77.png', "group": 6},
+
+
+                {id: 77, "label": "Inventions and Dimensions - Herbie Hancock (1964)", shape: 'circularImage', image: 'img/78.png', "group": 2},
+                {id: 78, "label": "Empyrean Isles - Herbie Hancock (1964)", shape: 'circularImage', image: 'img/79.png', "group": 7},
+                {id: 79, "label": "Speak Like a Child - Herbie Hancock (1968)", shape: 'circularImage', image: 'img/80.png', "group": 7},
+                {id: 80, "label": "Mwandishi - Herbie Hancock (1971)", shape: 'circularImage', image: 'img/81.png', "group": 7},
+                {id: 81, "label": "Crossings - Herbie Hancock (1972)", shape: 'circularImage', image: 'img/82.png', "group": 7},
+                {id: 82, "label": "Sextant - Herbie Hancock (1973)", shape: 'circularImage', image: 'img/83.png', "group": 7},
+                {id: 83, "label": "Man-Child - Herbie Hancock (1975)", shape: 'circularImage', image: 'img/84.png', "group": 7},
+                {id: 84, "label": "Sunlight - Herbie Hancock (1978)", shape: 'circularImage', image: 'img/85.png', "group": 7},
+                {id: 85, "label": "Mr. Hands - Herbie Hancock (1980)", shape: 'circularImage', image: 'img/86.png', "group": 7},
+
+
+
+
+            ];
+
+            // create some edges
+            var edges = [
+                {"from": 0, "to": 1, arrows: "to"},
+                {"from": 0, "to": 7, arrows: "to"},
+                {"from": 0, "to": 3, arrows: "to"},
+                {"from": 6, "to": 2, arrows: "to"},
+     			{"from": 3, "to": 1, arrows: "to"},
+     			{"from": 4, "to": 5, arrows: "to"},
+     			{"from": 1, "to": 4, arrows: "to"},
+     			{"from": 1, "to": 6, arrows: "to"},
+     			{"from": 0, "to": 8, arrows: "to"},
+     			{"from": 9, "to": 10, arrows: "to"},
+     			{"from": 10, "to": 11, arrows: "to"},
+      			{"from": 11, "to": 12, arrows: "to"}, 
+      			{"from": 11, "to": 76, arrows: "to"},    			
+     			{"from": 12, "to": 13, arrows: "to"}, 
+     			{"from": 12, "to": 14, arrows: "to"}, 
+     			{"from": 12, "to": 15, arrows: "to"}, 
+     			{"from": 15, "to": 16, arrows: "to"}, 
+     			{"from": 13, "to": 17, arrows: "to"}, 
+     			{"from": 14, "to": 17, arrows: "to"},  
+     			{"from": 14, "to": 18, arrows: "to"},  
+     			{"from": 13, "to": 18, arrows: "to"}, 
+     			{"from": 18, "to": 19, arrows: "to"},  
+
+     			{"from": 0, "to": 20, arrows: "to"}, 
+     			{"from": 20, "to": 21, arrows: "to"}, 
+     			{"from": 21, "to": 22, arrows: "to"},  
+     			{"from": 22, "to": 23, arrows: "to"},  
+     			{"from": 23, "to": 24, arrows: "to"}, 
+
+     			{"from": 20, "to": 25, arrows: "to"},  
+     			{"from": 25, "to": 26, arrows: "to"},  
+     			{"from": 26, "to": 27, arrows: "to"},
+
+     			{"from": 28, "to": 15, arrows: "to"}, 
+     			{"from": 15, "to": 29, arrows: "to"}, 
+     			{"from": 28, "to": 30, arrows: "to"},  
+     			{"from": 28, "to": 31, arrows: "to"},  
+     			{"from": 28, "to": 32, arrows: "to"},
+     			{"from": 32, "to": 15, arrows: "to"},
+     			{"from": 28, "to": 33, arrows: "to"},  
+     			{"from": 28, "to": 34, arrows: "to"},
+     			{"from": 1, "to": 33, arrows: "to"},
+     			{"from": 28, "to": 26, arrows: "to"},
+
+     			{"from": 1, "to": 35, arrows: "to"},
+     			{"from": 11, "to": 35, arrows: "to"},
+
+     			{"from": 11, "to": 29, arrows: "to"},
+
+     			{"from": 8, "to": 9, arrows: "to"},
+
+     			{"from": 7, "to": 36, arrows: "to"},
+     			{"from": 10, "to":37, arrows: "to"},
+
+
+     			{"from": 38, "to": 39, arrows: "to"},
+      			{"from": 39, "to": 40, arrows: "to"},    			
+     			{"from": 40, "to": 41, arrows: "to"}, 
+     			{"from": 41, "to": 42, arrows: "to"}, 
+     			{"from": 41, "to": 43, arrows: "to"},
+     			{"from": 41, "to": 44, arrows: "to"}, 
+     			{"from": 43, "to": 45, arrows: "to"},  
+     			{"from": 42, "to": 45, arrows: "to"},    
+ 
+      			{"from": 44, "to": 45, arrows: "to"},
+     			{"from": 45, "to": 46, arrows: "to"},
+     			{"from": 46, "to": 50, arrows: "to"},
+      			{"from": 45, "to": 47, arrows: "to"}, 
+      			{"from": 47, "to": 50, arrows: "to"},   			
+     			{"from": 45, "to": 48, arrows: "to"}, 
+     			{"from": 48, "to": 50, arrows: "to"},
+     			{"from": 45, "to": 49, arrows: "to"},
+     			{"from": 49, "to": 50, arrows: "to"},
+
+     			{"from": 39, "to": 51, arrows: "to"},
+     			{"from": 51, "to": 37, arrows: "to"}, 
+     			{"from": 51, "to": 52, arrows: "to"},
+     			{"from": 52, "to": 53, arrows: "to"},
+
+     			{"from": 37, "to": 54, arrows: "to"},
+     			{"from": 54, "to": 55, arrows: "to"},
+     			{"from": 50, "to": 55, arrows: "to"},
+
+     			{"from": 56, "to": 9, arrows: "to"},
+     			{"from": 56, "to": 10, arrows: "to"},
+     			{"from": 56, "to": 57, arrows: "to"},
+     			{"from": 10, "to": 57, arrows: "to"},
+     			{"from": 56, "to": 37, arrows: "to"},
+
+     			/* Herbie Hancock*/
+     			{"from": 58, "to": 54, arrows: "to"}, 
+     			{"from": 58, "to": 55, arrows: "to"}, 
+     			{"from": 58, "to": 78, arrows: "to"},
+     			{"from": 78, "to": 59, arrows: "to"}, 
+     			{"from": 59, "to": 79, arrows: "to"},
+     			{"from": 79, "to": 60, arrows: "to"},
+     			{"from": 60, "to": 80, arrows: "to"},
+     			{"from": 60, "to": 81, arrows: "to"},
+     			{"from": 60, "to": 82, arrows: "to"},
+     			{"from": 80, "to": 61, arrows: "to"},
+     			{"from": 81, "to": 61, arrows: "to"},
+     			{"from": 82, "to": 61, arrows: "to"},
+     			{"from": 61, "to": 62, arrows: "to"},
+     			{"from": 58, "to": 77, arrows: "to"},
+     			{"from": 77, "to": 59, arrows: "to"},
+     			{"from": 78, "to": 61, arrows: "to"},
+     			{"from": 78, "to": 60, arrows: "to"},
+     			{"from": 58, "to": 61, arrows: "to"},
+     			{"from": 62, "to": 83, arrows: "to"},
+     			{"from": 83, "to": 84, arrows: "to"},
+     			{"from": 84, "to": 85, arrows: "to"},
+
+     			/* Wayne Shorter*/
+     			{"from": 63, "to": 64, arrows: "to"}, 
+     			{"from": 64, "to": 65, arrows: "to"}, 
+     			{"from": 65, "to": 66, arrows: "to"},
+     			{"from": 66, "to": 67, arrows: "to"},
+     			{"from": 67, "to": 68, arrows: "to"},
+     			{"from": 55, "to": 65, arrows: "to"},  
+     			{"from": 50, "to": 63, arrows: "to"},
+
+     			/* Miles davis Post bop */
+     			{"from": 55, "to": 69, arrows: "to"}, 
+     			{"from": 69, "to": 70, arrows: "to"}, 
+     			{"from": 70, "to": 71, arrows: "to"}, 
+     			{"from": 71, "to": 72, arrows: "to"},
+     			{"from": 72, "to": 73, arrows: "to"},
+     			{"from": 73, "to": 74, arrows: "to"},
+     			{"from": 74, "to": 75, arrows: "to"},
+     			{"from": 75, "to": 61, arrows: "to"},
+
+
+
+
+
+
+
+
+            ];
+
+            // create a network
+            var container = document.getElementById('mynetwork');
+            container.value = "LR"
+            var data = {
+                nodes: nodes,
+                edges: edges
+            };
+            var options = {
+                nodes: {
+                    shape: 'dot',
+                    size: 60
+                },
+                physics: {
+                    forceAtlas2Based: {
+                        gravitationalConstant: -50,
+                        centralGravity: 0.002,
+                        springLength: 300,
+                        springConstant: 0.18
+                    },
+                    maxVelocity: 146,
+                    solver: 'forceAtlas2Based',
+                    timestep: 0.35,
+                    stabilization: {iterations: 150}
+                },
+                layout: {
+                	randomSeed:26
+                }
+            };
+            var network = new vis.Network(container, data, options);
+
+        }
+    </script>
+    
+</head>
+
+<body onload="draw()">
+<p>
+    Relations between the Famous Jazz Musicians
+</p>
+
+<div id="mynetwork"></div>
+</body>
+</html>
