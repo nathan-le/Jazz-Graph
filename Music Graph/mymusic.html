@@ -137,7 +137,40 @@
                 {id: 97, "label": "Meditations - John Coltrane (1965)", shape: 'circularImage', image: 'img/98.png', "group": 6},
                 {id: 98, "label": "Expression - John Coltrane (1967)", shape: 'circularImage', image: 'img/99.png', "group": 6},
 
+                /* Wes Montgomery */
+                {id: 99, "label": "The Incredible Jazz Guitar of Wes Montgomery - Wes Montgomery (1960)", shape: 'circularImage', image: 'img/100.png', "group": 6},
+                {id: 100, "label": "SO Much Guitar! - Wes Montgomery (1961)", shape: 'circularImage', image: 'img/101.png', "group": 2},
+                {id: 101, "label": "Bags Meets Wes! - Wes Montgomery (1962)", shape: 'circularImage', image: 'img/102.png', "group": 2},
+                {id: 102, "label": "Boss Guitar - Wes Montgomery (1963)", shape: 'circularImage', image: 'img/103.png', "group": 2},
+                {id: 103, "label": "Guitar on the Go - Wes Montgomery (1963)", shape: 'circularImage', image: 'img/104.png', "group": 2},
+                {id: 104, "label": "Smokin' at the Half Note - Wes Montgomery (1965)", shape: 'circularImage', image: 'img/105.png', "group": 2},
+                {id: 105, "label": "Jimmy & Wes: The Dynamic Duo - Wes Montgomery (1966)", shape: 'circularImage', image: 'img/106.png', "group": 2},
+                {id: 106, "label": "A Day in the Life - Wes Montgomery (1967)", shape: 'circularImage', image: 'img/107.png', "group": 2},                
+                {id: 107, "label": "Down Here on the Ground - Wes Montgomery (1968)", shape: 'circularImage', image: 'img/108.png', "group": 2},
+                {id: 108, "label": "Road Song - Wes Montgomery (1968)", shape: 'circularImage', image: 'img/109.png', "group": 2},
+                {id: 109, "label": "Work Song - Nat Adderley (1960)", shape: 'circularImage', image: 'img/110.png', "group": 2},
+                {id: 110, "label": "Cannonball Adderley and the Poll-Winners - Cannonball Adderley (1961)", shape: 'circularImage', image: 'img/111.png', "group": 2},
 
+                 /* Sonny Rollins */
+                {id: 111, "label": "Tenor Madness - Sonny Rollins (1956)", shape: 'circularImage', image: 'img/112.png', "group": 6},
+                {id: 112, "label": "Saxophone Colossus - Sonny Rollins (1956)", shape: 'circularImage', image: 'img/113.png', "group": 2},
+                {id: 113, "label": "Way Out West - Sonny Rollins (1957)", shape: 'circularImage', image: 'img/114.png', "group": 2},
+                {id: 114, "label": "Freedom Suite - Sonny Rollins (1958)", shape: 'circularImage', image: 'img/115.png', "group": 2},
+                {id: 115, "label": "Sonny Side Up - Dizzy Gillespie (1959)", shape: 'circularImage', image: 'img/116.png', "group": 2},
+
+                {id: 117, "label": "The Standard Sonny Rollins - Sonny Rollins (1964)", shape: 'circularImage', image: 'img/118.png', "group": 2},
+                {id: 118, "label": "Bags' Groove - Miles Davis (1957)", shape: 'circularImage', image: 'img/119.png', "group": 2},                
+                {id: 119, "label": "The Amazing Bud Powell - Bud Powell (1952)", shape: 'circularImage', image: 'img/120.png', "group": 2},
+                {id: 120, "label": "Relaxin' with the Miles Davis Quintet - Miles Davis (1958)", shape: 'circularImage', image: 'img/121.png', "group": 2},
+
+                 /* Joe Henderson */
+                {id: 121, "label": "Page One - Joe Henderson (1963)", shape: 'circularImage', image: 'img/122.png', "group": 2},
+                {id: 122, "label": "Inner Urge - Joe Henderson (1966)", shape: 'circularImage', image: 'img/123.png', "group": 2},
+                {id: 123, "label": "Mode for Joe - Joe Henderson (1966)", shape: 'circularImage', image: 'img/124.png', "group": 2},
+                {id: 124, "label": "The Standard Joe - Joe Henderson (1992)", shape: 'circularImage', image: 'img/125.png', "group": 2},
+                {id: 125, "label": "Double Rainbow: The Music of Antonio Carlos Jobim - Joe Henderson (1995)", shape: 'circularImage', image: 'img/126.png', "group": 2},
+                {id: 126, "label": "Big Band - Joe Henderson (1997)", shape: 'circularImage', image: 'img/127.png', "group": 2},
+                {id: 127, "label": "Song for My Father - Horace Silver (1965)", shape: 'circularImage', image: 'img/128.png', "group": 2},                
             ];
 
             // create some edges
@@ -150,7 +183,8 @@
      			{"from": 4, "to": 5, arrows: "to"},
      			{"from": 1, "to": 4, arrows: "to"},
      			{"from": 1, "to": 6, arrows: "to"},
-     			{"from": 0, "to": 8, arrows: "to"},
+     			{"from": 0, "to": 120, arrows: "to"},
+                {"from": 120, "to": 8, arrows: "to"},
      			{"from": 9, "to": 10, arrows: "to"},
      			{"from": 10, "to": 11, arrows: "to"},
       			{"from": 11, "to": 12, arrows: "to"}, 
@@ -296,6 +330,48 @@
                 {"from": 96, "to": 97, arrows: "to"},
                 {"from": 97, "to": 98, arrows: "to"},
                 {"from": 94, "to": 97, arrows: "to"},
+
+                /* Wes Montgomery */
+                {"from": 99, "to": 100, arrows: "to"}, 
+                {"from": 100, "to": 104, arrows: "to"}, 
+                {"from": 101, "to": 102, arrows: "to"},
+                {"from": 102, "to": 103, arrows: "to"}, 
+                {"from": 99, "to": 101, arrows: "to"},
+                {"from": 103, "to": 104, arrows: "to"},
+                {"from": 103, "to": 105, arrows: "to"},
+                {"from": 99, "to": 106, arrows: "to"},
+                {"from": 106, "to": 107, arrows: "to"},
+                {"from": 107, "to": 108, arrows: "to"},
+
+                {"from": 99, "to": 109, arrows: "to"},
+                {"from": 99, "to": 110, arrows: "to"},
+
+                {"from": 41, "to": 99, arrows: "to"},
+                {"from": 58, "to": 106, arrows: "to"},
+
+                /* Sonny Rollins */
+                {"from": 111, "to": 112, arrows: "to"}, 
+                {"from": 111, "to": 113, arrows: "to"}, 
+                {"from": 113, "to": 114, arrows: "to"},
+                {"from": 112, "to": 115, arrows: "to"}, 
+                {"from": 112, "to": 30, arrows: "to"},
+                {"from": 115, "to": 30, arrows: "to"},
+                {"from": 30, "to": 117, arrows: "to"},
+                {"from": 118, "to": 111, arrows: "to"},
+                {"from": 119, "to": 111, arrows: "to"},
+                {"from": 0, "to": 118, arrows: "to"},
+                {"from": 120, "to": 111, arrows: "to"},
+                {"from": 58, "to": 117, arrows: "to"},
+
+
+                /* Joe Henderson */
+                {"from": 121, "to": 122, arrows: "to"}, 
+                {"from": 122, "to": 123, arrows: "to"}, 
+                {"from": 123, "to": 124, arrows: "to"},
+                {"from": 124, "to": 125, arrows: "to"}, 
+                {"from": 125, "to": 126, arrows: "to"},
+                {"from": 121, "to": 127, arrows: "to"},
+
 
 
 
