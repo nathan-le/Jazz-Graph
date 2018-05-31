@@ -354,21 +354,29 @@
                 /* Thelonius Monk */
                 {id: 267, "label": "Genius of Modern Music: Volume 1 - Thelonius Monk (1947)", shape: 'circularImage', image: 'img/268.png', "group": 2},
                 {id: 268, "label": "Genius of Modern Music: Volume 2 - Thelonius Monk (1952)", shape: 'circularImage', image: 'img/269.png', "group": 2},
-
                 {id: 269, "label": "Thelonious Monk Trio - Thelonius Monk (1954)", shape: 'circularImage', image: 'img/270.png', "group": 2},
                 {id: 270, "label": "Monk - Thelonius Monk (1954)", shape: 'circularImage', image: 'img/271.png', "group": 2},
                 {id: 271, "label": "Thelonious Monk and Sonny Rollins - Thelonius Monk (1954)", shape: 'circularImage', image: 'img/272.png', "group": 2},
-
                 {id: 272, "label": "Thelonious Monk Plays Duke Ellington - Thelonius Monk (1955)", shape: 'circularImage', image: 'img/273.png', "group": 2},
                 {id: 273, "label": "The Unique Thelonious Monk - Thelonius Monk (19564)", shape: 'circularImage', image: 'img/274.png', "group": 2},
                 {id: 274, "label": "Brilliant Corners - Thelonius Monk (1956)", shape: 'circularImage', image: 'img/275.png', "group": 2},
                 {id: 275, "label": "Thelonious Monk with John Coltrane - Thelonius Monk (1957)", shape: 'circularImage', image: 'img/276.png', "group": 2},
-
                 {id: 276, "label": "Monk's Dream - Thelonius Monk (1962)", shape: 'circularImage', image: 'img/277.png', "group": 2},
                 {id: 277, "label": "Criss-Cross - Thelonius Monk (1963)", shape: 'circularImage', image: 'img/278.png', "group": 2},
                 {id: 278, "label": "Live at the It Club - Thelonius Monk (1964)", shape: 'circularImage', image: 'img/279.png', "group": 2},
                 {id: 279, "label": "Underground - Thelonius Monk (1968)", shape: 'circularImage', image: 'img/280.png', "group": 2},
                 {id: 280, "label": "Miles Davis and the Modern Jazz Giants - Miles Davis (1954)", shape: 'circularImage', image: 'img/281.png', "group": 2},
+
+                /* Bud Powell */
+                {id: 281, "label": "Bud Powell Trio - Bud Powell (1947)", shape: 'circularImage', image: 'img/282.png', "group": 10},
+                {id: 282, "label": "The Complete Bud Powell on Verve - Bud Powell (1949-1956)", shape: 'circularImage', image: 'img/283.png', "group": 10},
+                {id: 283, "label": "The Amazing Bud Powell, Vol. 2 - Bud Powell (1953)", shape: 'circularImage', image: 'img/284.png', "group": 10},
+                {id: 284, "label": "Bud! The Amazing Bud Powell (Vol. 3) - Bud Powell (1957)", shape: 'circularImage', image: 'img/285.png', "group": 10},
+                {id: 285, "label": "A Tribute to Cannonball - Bud Powell (1961)", shape: 'circularImage', image: 'img/286.png', "group": 10},
+                {id: 286, "label": "A Portrait of Thelonious - Bud Powell (1961)", shape: 'circularImage', image: 'img/287.png', "group": 10},
+                {id: 287, "label": "Bud Powell in Paris - Bud Powell (1963)", shape: 'circularImage', image: 'img/288.png', "group": 10},
+                {id: 288, "label": "Dexter Rides Again - Dexter Gordon (1947)", shape: 'circularImage', image: 'img/289.png', "group": 10},
+                {id: 289, "label": "Paris Jam Session - Art Blakey & the Jazz Messengers (1959)", shape: 'circularImage', image: 'img/290.png', "group": 10},
 
 
 
@@ -376,6 +384,29 @@
 
             // create some edges
             var edges = [
+
+                /* Bud Powell */
+                {"from": 267, "to": 281, arrows: "to"},
+                {"from": 281, "to": 282, arrows: "to"},
+                {"from": 282, "to": 119, arrows: "to"},
+                {"from": 119, "to": 283, arrows: "to"},
+                {"from": 283, "to": 284, arrows: "to"},
+                {"from": 284, "to": 285, arrows: "to"},
+                {"from": 284, "to": 286, arrows: "to"},
+                {"from": 286, "to": 267, arrows: "to"},
+                {"from": 284, "to": 287, arrows: "to"},
+                {"from": 285, "to": 142, arrows: "to"},
+
+                {"from": 281, "to": 288, arrows: "to"},
+                {"from": 128, "to": 288, arrows: "to"},
+
+                {"from": 284, "to": 289, arrows: "to"},
+                {"from": 41, "to": 289, arrows: "to"},
+
+                {"from": 172, "to": 281, arrows: "to"},
+
+                {"from": 119, "to": 214, arrows: "to"},
+                {"from": 284, "to": 167, arrows: "to"},
 
                 /* Thelonius Monk */
                 {"from": 172, "to": 267, arrows: "to"},
