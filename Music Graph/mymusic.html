@@ -306,7 +306,7 @@
                 {id: 230, "label": "The Poll Winners - Barney Kessel (1957)", shape: 'circularImage', image: 'img/231.png', "group": 2},
                 {id: 231, "label": "The Poll Winners Ride Again! - Barney Kessel (1958)", shape: 'circularImage', image: 'img/232.png', "group": 2},
                 {id: 232, "label": "Poll Winners Three! - Barney Kessel (1959)", shape: 'circularImage', image: 'img/233.png', "group": 2},
-                {id: 233, "label": "Barney Kessel (1941)", shape: 'circularImage', image: 'img/234.png', "group": 2},
+                // {id: 233, "label": "Barney Kessel (1941)", shape: 'circularImage', image: 'img/234.png', "group": 2},
                 {id: 234, "label": "The Complete Savoy and Dial Studio Recordings - Charlie Parker (1944-1948)", shape: 'circularImage', image: 'img/235.png', "group": 2},
 
                 /* Kenny Burrell */
@@ -333,6 +333,24 @@
                 {id: 253, "label": "Unforgettable - Joe Pass (1992)", shape: 'circularImage', image: 'img/254.png', "group": 2},
                 {id: 254, "label": "Easy Living - Ella Fitzgerald & Joe Pass (1986)", shape: 'circularImage', image: 'img/255.png', "group": 2},
 
+                /* Django Rienhardt */
+                {id: 255, "label": "Django Rienhardt (1928-1950)", shape: 'circularImage', image: 'img/256.png', "group": 2},
+
+                /* George Benson */
+                {id: 256, "label": "The New Boss Guitar of George Benson - George Benson (1964)", shape: 'circularImage', image: 'img/257.png', "group": 2},
+                {id: 257, "label": "It's Uptown - George Benson (1966)", shape: 'circularImage', image: 'img/258.png', "group": 2},
+                {id: 258, "label": "The George Benson Cookbook - George Benson (1966)", shape: 'circularImage', image: 'img/259.png', "group": 2},
+                {id: 259, "label": "Giblet Gravy - George Benson (1968)", shape: 'circularImage', image: 'img/260.png', "group": 2},
+                {id: 260, "label": "Beyond the Blue Horizon - George Benson (1971)", shape: 'circularImage', image: 'img/261.png', "group": 2},
+                {id: 261, "label": "White Rabbit - George Benson (1971)", shape: 'circularImage', image: 'img/262.png', "group": 2},
+                {id: 262, "label": "Body Talk - George Benson (1973)", shape: 'circularImage', image: 'img/263.png', "group": 2},
+                {id: 263, "label": "Bad Benson - George Benson (1974)", shape: 'circularImage', image: 'img/264.png', "group": 2},
+                {id: 264, "label": "Breezin' - George Benson (1976)", shape: 'circularImage', image: 'img/265.png', "group": 2},
+                {id: 265, "label": "Love Walked In - George Benson (1989)", shape: 'circularImage', image: 'img/266.png', "group": 2},
+
+                /* Freddie Green/Count Basie Orchestra */
+                {id: 266, "label": "April in Paris - Count Basie and His Orchestra (1955)", shape: 'circularImage', image: 'img/267.png', "group": 2},
+
 
 
 
@@ -341,22 +359,42 @@
             // create some edges
             var edges = [
 
+                /* Freddie Green/Count Basie Orchestra */
+                {"from": 266, "to": 28, arrows: "to"},
+                {"from": 266, "to": 226, arrows: "to"},
+
+                /* George Benson */
+                {"from": 255, "to": 256, arrows: "to"},
+                {"from": 255, "to": 226, arrows: "to"},
+                {"from": 256, "to": 257, arrows: "to"},
+                {"from": 257, "to": 258, arrows: "to"},
+                {"from": 258, "to": 259, arrows: "to"},
+                {"from": 259, "to": 260, arrows: "to"},
+                {"from": 260, "to": 261, arrows: "to"},
+                {"from": 261, "to": 262, arrows: "to"},
+                {"from": 262, "to": 263, arrows: "to"},
+                {"from": 263, "to": 264, arrows: "to"},
+                {"from": 263, "to": 265, arrows: "to"},
+                {"from": 264, "to": 265, arrows: "to"},
+
+                {"from": 258, "to": 72, arrows: "to"},
+                {"from": 259, "to": 155, arrows: "to"},
+                {"from": 72, "to": 259, arrows: "to"},
+                {"from": 155, "to": 260, arrows: "to"},
+                {"from": 259, "to": 200, arrows: "to"},
+
                 /* Joe Pass */
                 {"from": 172, "to": 241, arrows: "to"},
                 {"from": 241, "to": 242, arrows: "to"},
                 {"from": 242, "to": 243, arrows: "to"},
                 {"from": 243, "to": 244, arrows: "to"},
-
                 {"from": 244, "to": 245, arrows: "to"},
                 {"from": 245, "to": 246, arrows: "to"},
                 {"from": 246, "to": 247, arrows: "to"},
                 {"from": 245, "to": 248, arrows: "to"},
                 {"from": 244, "to": 249, arrows: "to"},
-
                 {"from": 249, "to": 250, arrows: "to"},
                 {"from": 250, "to": 251, arrows: "to"},
-
-
                 {"from": 247, "to": 252, arrows: "to"},
                 {"from": 252, "to": 253, arrows: "to"},
                 {"from": 252, "to": 254, arrows: "to"},
@@ -745,7 +783,7 @@
                 {"from": 229, "to": 230, arrows: "to"},
                 {"from": 230, "to": 231, arrows: "to"},
                 {"from": 231, "to": 232, arrows: "to"},
-                {"from": 232, "to": 233, arrows: "to"},
+
                 {"from": 234, "to": 227, arrows: "to"},
                 {"from": 172, "to": 234, arrows: "to"},
 
