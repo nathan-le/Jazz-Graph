@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f73c5452-a7fb-480b-b7fe-e8a45ed98bf3" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/Jazz.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Jazz.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Music Graph/mymusic.html" beforeDir="false" afterPath="$PROJECT_DIR$/Music Graph/mymusic.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,8 +35,8 @@
       <file leaf-file-name="Jazz.txt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Jazz.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="359">
-              <caret line="110" column="13" lean-forward="true" selection-start-line="110" selection-start-column="13" selection-end-line="110" selection-end-column="13" />
+            <state relative-caret-position="205">
+              <caret line="103" selection-start-line="103" selection-end-line="103" />
             </state>
           </provider>
         </entry>
@@ -163,7 +162,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1371" height="837" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -216,8 +214,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Jazz.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="110" column="13" lean-forward="true" selection-start-line="110" selection-start-column="13" selection-end-line="110" selection-end-column="13" />
+        <state relative-caret-position="205">
+          <caret line="103" selection-start-line="103" selection-end-line="103" />
         </state>
       </provider>
     </entry>
