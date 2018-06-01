@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f73c5452-a7fb-480b-b7fe-e8a45ed98bf3" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Jazz.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Jazz.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Music Graph/img/303.png" beforeDir="false" afterPath="$PROJECT_DIR$/Music Graph/img/303.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Music Graph/mymusic.html" beforeDir="false" afterPath="$PROJECT_DIR$/Music Graph/mymusic.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -38,8 +36,8 @@
       <file leaf-file-name="Jazz.txt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Jazz.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="104">
-              <caret line="121" column="11" selection-start-line="121" selection-start-column="11" selection-end-line="121" selection-end-column="11" />
+            <state relative-caret-position="90">
+              <caret line="133" column="5" selection-start-line="133" selection-start-column="5" selection-end-line="133" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -218,8 +216,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Jazz.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="121" column="11" selection-start-line="121" selection-start-column="11" selection-end-line="121" selection-end-column="11" />
+        <state relative-caret-position="90">
+          <caret line="133" column="5" selection-start-line="133" selection-start-column="5" selection-end-line="133" selection-end-column="5" />
         </state>
       </provider>
     </entry>

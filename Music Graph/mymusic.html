@@ -406,12 +406,79 @@
                 {id: 310, "label": "Tristeza on Piano - Oscar Peterson (1970)", shape: 'circularImage', image: 'img/311.png', "group": 10},
                 {id: 311, "label": "The Giants - Oscar Peterson, Joe Pass, & Ray Brown (1974)", shape: 'circularImage', image: 'img/312.png', "group": 10},
 
+                /* McCoy Tyner */
+                {id: 312, "label": "Inception - McCoy Tyner (1962)", shape: 'circularImage', image: 'img/313.png', "group": 6},
+                {id: 313, "label": "Reaching Fourth - McCoy Tyner (1962)", shape: 'circularImage', image: 'img/314.png', "group": 6},
+                {id: 314, "label": "The Real McCoy - McCoy Tyner (1967)", shape: 'circularImage', image: 'img/315.png', "group": 6},
+                {id: 315, "label": "Tender Moments - McCoy Tyner (1967)", shape: 'circularImage', image: 'img/316.png', "group": 6},
+                {id: 316, "label": "Expansions - McCoy Tyner (1968)", shape: 'circularImage', image: 'img/317.png', "group": 6},
+                {id: 317, "label": "Extensions - McCoy Tyner (1970)", shape: 'circularImage', image: 'img/318.png', "group": 6},
+                {id: 318, "label": "Asante - McCoy Tyner (1970)", shape: 'circularImage', image: 'img/319.png', "group": 6},
+                {id: 319, "label": "Enlightenment - McCoy Tyner (1973)", shape: 'circularImage', image: 'img/320.png', "group": 6},
+                {id: 320, "label": "Atlantis - McCoy Tyner (1974)", shape: 'circularImage', image: 'img/321.png', "group": 6},
+                {id: 321, "label": "Trident - McCoy Tyner (1975)", shape: 'circularImage', image: 'img/322.png', "group": 6},
+                {id: 322, "label": "Passion Dance - McCoy Tyner (1978)", shape: 'circularImage', image: 'img/323.png', "group": 6},
+                {id: 323, "label": "Meet the Jazztet - Art Farmer & Benny Golson  (1960)", shape: 'circularImage', image: 'img/324.png', "group": 6},
+                {id: 324, "label": "Straight No Filter - McCoy Tyner (1966)", shape: 'circularImage', image: 'img/325.png', "group": 6},
+
+                /* Ahmad Jamal */
+                {id: 325, "label": "Ahmad Jamal Plays - Ahmad Jamal (1955)", shape: 'circularImage', image: 'img/326.png', "group": 6},
+                {id: 326, "label": "The Ahmad Jamal Trio - Ahmad Jamal (1955)", shape: 'circularImage', image: 'img/327.png', "group": 6},
+                {id: 327, "label": "At the Pershing: But Not for Me  - Ahmad Jamal (1958)", shape: 'circularImage', image: 'img/328.png', "group": 6},
+                {id: 328, "label": "Portfolio of Ahmad Jamal - Ahmad Jamal (1958)", shape: 'circularImage', image: 'img/329.png', "group": 6},
+                {id: 329, "label": "Poinciana - Ahmad Jamal (1958)", shape: 'circularImage', image: 'img/330.png', "group": 6},
+                {id: 330, "label": "The Awakening - Ahmad Jamal (1970)", shape: 'circularImage', image: 'img/331.png', "group": 6},
+
 
 
             ];
 
             // create some edges
             var edges = [
+
+                /* Ahmad Jamal */
+                {"from": 10, "to": 325, arrows: "to"},
+                {"from": 325, "to": 326, arrows: "to"},
+                {"from": 326, "to": 327, arrows: "to"},
+                {"from": 327, "to": 328, arrows: "to"},
+                {"from": 328, "to": 329, arrows: "to"},
+                {"from": 329, "to": 330, arrows: "to"},
+
+
+                /* McCoy Tyner */
+                {"from": 31, "to": 323, arrows: "to"},
+                {"from": 188, "to": 312, arrows: "to"},
+                {"from": 189, "to": 312, arrows: "to"},
+                {"from": 312, "to": 191, arrows: "to"},
+                {"from": 312, "to": 196, arrows: "to"},
+                {"from": 94, "to": 314, arrows: "to"},
+                {"from": 121, "to": 314, arrows: "to"},
+                {"from": 122, "to": 314, arrows: "to"},
+                {"from": 63, "to": 314, arrows: "to"},
+                {"from": 64, "to": 314, arrows: "to"},
+                {"from": 53, "to": 324, arrows: "to"},
+
+                {"from": 312, "to": 313, arrows: "to"},
+                {"from": 313, "to": 314, arrows: "to"},
+                {"from": 314, "to": 315, arrows: "to"},
+                {"from": 315, "to": 316, arrows: "to"},
+                {"from": 316, "to": 317, arrows: "to"},
+                {"from": 317, "to": 318, arrows: "to"},
+                {"from": 318, "to": 319, arrows: "to"},
+                {"from": 319, "to": 320, arrows: "to"},
+                {"from": 320, "to": 321, arrows: "to"},
+                {"from": 321, "to": 222, arrows: "to"},
+
+                {"from": 323, "to": 312, arrows: "to"},
+                {"from": 312, "to": 324, arrows: "to"},
+                {"from": 51, "to": 324, arrows: "to"},
+                {"from": 188, "to": 324, arrows: "to"},
+                {"from": 58, "to": 324, arrows: "to"},
+                {"from": 313, "to": 64, arrows: "to"},
+
+                {"from": 205, "to": 315, arrows: "to"},
+                {"from": 63, "to": 316, arrows: "to"},
+                {"from": 63, "to": 317, arrows: "to"},
 
                 /* Oscar Peterson */
                 {"from": 302, "to": 303, arrows: "to"},
@@ -425,11 +492,9 @@
                 {"from": 309, "to": 310, arrows: "to"},
                 {"from": 310, "to": 250, arrows: "to"},
                 {"from": 250, "to": 311, arrows: "to"},
-
                 {"from": 302, "to": 227, arrows: "to"},
                 {"from": 303, "to": 227, arrows: "to"},
                 {"from": 304, "to": 227, arrows: "to"},
-
                 {"from": 241, "to": 311, arrows: "to"},
 
                 /* Horace Silver */
