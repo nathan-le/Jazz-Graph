@@ -391,9 +391,20 @@
                 {id: 297, "label": "Blowin' the Blues Away - Horace Silver (1959)", shape: 'circularImage', image: 'img/298.png', "group": 10},
                 {id: 298, "label": "Horace-Scope - Horace Silver (1960)", shape: 'circularImage', image: 'img/299.png', "group": 10},
                 {id: 299, "label": "The Tokyo Blues - Horace Silver (1962)", shape: 'circularImage', image: 'img/300.png', "group": 10},
-
                 {id: 300, "label": "The Cape Verdean Blues - Horace Silver (1965)", shape: 'circularImage', image: 'img/301.png', "group": 10},
                 {id: 301, "label": "The Jody Grind - Horace Silver (1966)", shape: 'circularImage', image: 'img/302.png', "group": 10},
+
+                /* Oscar Peterson */
+                {id: 302, "label": "Lester Young with the Oscar Peterson Trio - Oscar Peterson (1952)", shape: 'circularImage', image: 'img/303.png', "group": 10},
+                {id: 303, "label": "Oscar Peterson Plays Duke Ellington - Oscar Peterson (1952)", shape: 'circularImage', image: 'img/304.png', "group": 10},
+                {id: 304, "label": "Oscar Peterson Plays George Gershwin - Oscar Peterson (1952)", shape: 'circularImage', image: 'img/305.png', "group": 10},
+                {id: 305, "label": "Oscar Peterson at the Stratford Shakespearean Festival - Oscar Peterson (1956)", shape: 'circularImage', image: 'img/306.png', "group": 10},
+                {id: 306, "label": "On the Town with the Oscar Peterson Trio - Oscar Peterson (1958)", shape: 'circularImage', image: 'img/307.png', "group": 10},
+                {id: 307, "label": "The Trio - Oscar Peterson (1961)", shape: 'circularImage', image: 'img/308.png', "group": 10},
+                {id: 308, "label": "Night Train - Oscar Peterson (1962)", shape: 'circularImage', image: 'img/309.png', "group": 10},
+                {id: 309, "label": "Canadiana Suite - Oscar Peterson (1964)", shape: 'circularImage', image: 'img/310.png', "group": 10},
+                {id: 310, "label": "Tristeza on Piano - Oscar Peterson (1970)", shape: 'circularImage', image: 'img/311.png', "group": 10},
+                {id: 311, "label": "The Giants - Oscar Peterson, Joe Pass, & Ray Brown (1974)", shape: 'circularImage', image: 'img/312.png', "group": 10},
 
 
 
@@ -401,6 +412,25 @@
 
             // create some edges
             var edges = [
+
+                /* Oscar Peterson */
+                {"from": 302, "to": 303, arrows: "to"},
+                {"from": 303, "to": 304, arrows: "to"},
+                {"from": 304, "to": 5, arrows: "to"},
+                {"from": 5, "to": 305, arrows: "to"},
+                {"from": 305, "to": 306, arrows: "to"},
+                {"from": 306, "to": 307, arrows: "to"},
+                {"from": 307, "to": 308, arrows: "to"},
+                {"from": 308, "to": 309, arrows: "to"},
+                {"from": 309, "to": 310, arrows: "to"},
+                {"from": 310, "to": 250, arrows: "to"},
+                {"from": 250, "to": 311, arrows: "to"},
+
+                {"from": 302, "to": 227, arrows: "to"},
+                {"from": 303, "to": 227, arrows: "to"},
+                {"from": 304, "to": 227, arrows: "to"},
+
+                {"from": 241, "to": 311, arrows: "to"},
 
                 /* Horace Silver */
                 {"from": 293, "to": 39, arrows: "to"},
@@ -413,7 +443,6 @@
                 {"from": 299, "to": 127, arrows: "to"},
                 {"from": 127, "to": 300, arrows: "to"},
                 {"from": 300, "to": 301, arrows: "to"},
-
                 {"from": 293, "to": 51, arrows: "to"},
                 {"from": 294, "to": 51, arrows: "to"},
                 {"from": 121, "to": 300, arrows: "to"},

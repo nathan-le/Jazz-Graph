@@ -106,16 +106,6 @@ Pat martino
 antonio carlos jobim
 
 
-
-Piano
-Oscar Peterson
-
-Mycoy Tyner
-Chick corea
-
-Ahmad Jamal
-
-
 Saxophone
 Michael Brecker
 Chris Potter
@@ -125,6 +115,11 @@ Mark Turner
 
 
 
+Piano
+Mycoy Tyner
+Chick corea
+
+Ahmad Jamal
 
 Bass
 Charles Mingus
