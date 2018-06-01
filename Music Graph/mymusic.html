@@ -267,7 +267,7 @@
                 {id: 203, "label": "Sky Dive - Freddie Hubbard (1972)", shape: 'circularImage', image: 'img/204.png', "group": 11},
                 {id: 204, "label": "Doin' Allright - Dexter Gordon (1961)", shape: 'circularImage', image: 'img/205.png', "group": 2},
 
-                /* Lee Morgam */
+                /* Lee Morgan */
                 {id: 205, "label": "The Sidewinder - Lee Morgan (1963)", shape: 'circularImage', image: 'img/206.png', "group": 2},
 
                 /* Kenny Dorham */
@@ -378,12 +378,54 @@
                 {id: 288, "label": "Dexter Rides Again - Dexter Gordon (1947)", shape: 'circularImage', image: 'img/289.png', "group": 10},
                 {id: 289, "label": "Paris Jam Session - Art Blakey & the Jazz Messengers (1959)", shape: 'circularImage', image: 'img/290.png', "group": 10},
 
+                /* Red Garland */
+                {id: 290, "label": "A Garland of Red - Red Garland (1956)", shape: 'circularImage', image: 'img/291.png', "group": 10},
+                {id: 291, "label": "Red Garland's Piano - Red Garland (1957)", shape: 'circularImage', image: 'img/292.png', "group": 10},
+                {id: 292, "label": "Soul Junction - Red Garland (1957)", shape: 'circularImage', image: 'img/293.png', "group": 10},
+
+                /* Horace Silver */
+                {id: 293, "label": "6 Pieces of Silver - Horace Silver (1956)", shape: 'circularImage', image: 'img/294.png', "group": 10},
+                {id: 294, "label": "The Stylings of Silver - Horace Silver (1957)", shape: 'circularImage', image: 'img/295.png', "group": 10},
+                {id: 295, "label": "Further Explorations - Horace Silver (1958)", shape: 'circularImage', image: 'img/296.png', "group": 10},
+                {id: 296, "label": "Finger Poppin' - Horace Silver (1959)", shape: 'circularImage', image: 'img/297.png', "group": 10},
+                {id: 297, "label": "Blowin' the Blues Away - Horace Silver (1959)", shape: 'circularImage', image: 'img/298.png', "group": 10},
+                {id: 298, "label": "Horace-Scope - Horace Silver (1960)", shape: 'circularImage', image: 'img/299.png', "group": 10},
+                {id: 299, "label": "The Tokyo Blues - Horace Silver (1962)", shape: 'circularImage', image: 'img/300.png', "group": 10},
+
+                {id: 300, "label": "The Cape Verdean Blues - Horace Silver (1965)", shape: 'circularImage', image: 'img/301.png', "group": 10},
+                {id: 301, "label": "The Jody Grind - Horace Silver (1966)", shape: 'circularImage', image: 'img/302.png', "group": 10},
+
 
 
             ];
 
             // create some edges
             var edges = [
+
+                /* Horace Silver */
+                {"from": 293, "to": 39, arrows: "to"},
+                {"from": 293, "to": 294, arrows: "to"},
+                {"from": 294, "to": 295, arrows: "to"},
+                {"from": 295, "to": 296, arrows: "to"},
+                {"from": 296, "to": 297, arrows: "to"},
+                {"from": 297, "to": 298, arrows: "to"},
+                {"from": 298, "to": 299, arrows: "to"},
+                {"from": 299, "to": 127, arrows: "to"},
+                {"from": 127, "to": 300, arrows: "to"},
+                {"from": 300, "to": 301, arrows: "to"},
+
+                {"from": 293, "to": 51, arrows: "to"},
+                {"from": 294, "to": 51, arrows: "to"},
+                {"from": 121, "to": 300, arrows: "to"},
+
+                /* Red Garland */
+                {"from": 290, "to": 291, arrows: "to"},
+                {"from": 291, "to": 292, arrows: "to"},
+                {"from": 290, "to": 8, arrows: "to"},
+                {"from": 290, "to": 9, arrows: "to"},
+                {"from": 290, "to": 120, arrows: "to"},
+                {"from": 290, "to": 86, arrows: "to"},
+                {"from": 290, "to": 87, arrows: "to"},
 
                 /* Bud Powell */
                 {"from": 267, "to": 281, arrows: "to"},
